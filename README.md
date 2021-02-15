@@ -35,9 +35,9 @@ Install cuda 10.1 packages
 sudo apt update
 sudo apt install cuda-10-1
 ```
-**Note:**  
-&nbsp;&nbsp;  While installing cuda-10.1, apt manager may install libcublas package for cuda-10.2 instead of  
-&nbsp;&nbsp;  the one compatible with cuda 10.1, which can cause issues when using gpu functionality.  
+>**Note:**  
+>&nbsp;&nbsp;&nbsp;  While installing cuda-10.1, apt manager may install libcublas package for cuda-10.2 instead of  
+>&nbsp;&nbsp;&nbsp;  the one compatible with cuda 10.1, which can cause issues when using gpu functionality.  
 <br />
 To avoid this problem, let's remove this package and install the compatible package for cuda-10.1.  
 ```bash
