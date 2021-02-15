@@ -242,9 +242,9 @@ usage: ./darknet <function>
 ```
 ./darknet detector test cfg/coco.data cfg/yolov3.cfg weights/yolov3.weights data/test-image.jpg
 ```
-```diff
+
 - Details:
-- data/test_image.jpg: Predicted in 61.536000 milli-seconds.
+{- data/test_image.jpg: Predicted in 61.536000 milli-seconds. -}
 {+ chair: 71% +}
 {+ person: 100% +}
 {+ tvmonitor: 99% +}
@@ -260,8 +260,6 @@ usage: ./darknet <function>
 {+ book: 93% +}
 {+ pottedplant: 91% +}
 {+ vase: 29% +}
-
-```
 
 
 <p align=center>
