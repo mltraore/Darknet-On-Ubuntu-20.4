@@ -217,13 +217,24 @@ GPU=0
 CUDNN=0
 CUDNN_HALF=0
 OPENCV=0
-AVX=0
-OPENMP=0
-LIBSO=0
-ZED_CAMERA=0
-ZED_CAMERA_v2_8=0
+```
+We change this values to  
+```make
+GPU=1
+CUDNN=1
+CUDNN_HALF=1
+OPENCV=1
+```
+in order to enable CUDA cudNN and openCV  
+Then we save the file and open the terminal window in the darknet core directory  
+```
+make
+```
+Then once the compilation finished we verify the installation by typing {} in te terminal
+```
+./darknet
+```
+If all goes well, we should have as output:
 ```
 
-
-
-
+```
