@@ -244,38 +244,25 @@ usage: ./darknet <function>
 ```
 
 - Details:  
-  - {- data/test_image.jpg: Predicted in 61.536000 milli-seconds. -}  
-  - {+ chair: 71% +}
-  - {+ person: 100% +}
-  - {+ tvmonitor: 99% +}
-  - {+ keyboard: 27% +}
-  - {+ pottedplant: 43% +}
-  - {+ book: 58% +}
-  - {+ book: 31% +}
-  - {+ book: 26% +}
-  - {+ book: 72% +}
-  - {+ book: 56% +}
-  - {+ book: 75% +}
-  - {+ book: 69% +}
-  - {+ book: 93% +}
-  - {+ pottedplant: 91% +}
-  - {+ vase: 29% +}
-
-  - {+ addition +]
-  - [+ addition +}
-  - {- deletion -]
-  - [- deletion -}
   
- ```diff
- 
-  - {+ book: 75% +}
-  - {+ book: 69% +}
-  - {+ book: 93% +}
-  - {+ pottedplant: 91% +}
-  - {+ vase: 29% +}
-
- 
- ```
+```diff
+- data/test_image.jpg: Predicted in 61.536000 milli-seconds.  
++ chair: 71% 
++ person: 100% 
++ tvmonitor: 99% 
++ keyboard: 27% 
++ pottedplant: 43%
++ book: 58%
++ book: 31% 
++ book: 26%
++ book: 72%
++ book: 56% 
++ book: 75% 
++ book: 69% 
++ book: 93% 
++ pottedplant: 91% 
++ vase: 29% 
+```
 
 
 <p align=center>
