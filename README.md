@@ -186,9 +186,9 @@ There are 3 choices for the alternative gcc (providing /usr/bin/gcc).
 Press <enter> to keep the current choice[*], or type selection number:
 
 ```
-We enter the ID of the one we want to be set as default and press enter
+We enter the ID of the one we want to be set as default and press enter  
+<br>
 
-<br />
 Instaling openCV
 ```bash
 sudo apt install python3-opencv libopencv-dev libopencv-core-dev
