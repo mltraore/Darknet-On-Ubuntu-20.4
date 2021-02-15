@@ -236,5 +236,5 @@ Then once the compilation finished we verify the installation by typing {} in te
 ```
 If all goes well, we should have as output:
 ```
-
+usage: ./darknet <function>
 ```
