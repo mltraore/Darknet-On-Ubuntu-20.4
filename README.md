@@ -152,7 +152,7 @@ sudo apt-get install manpages-dev
 ```bash
 gcc --version
 ```
-#### 5. Install multiple gcc versions
+#### 5. Install multiple gcc versions and set the one we want as default
 - First, add the ubuntu-toolchain-r/test PPA to your system with:
 ```bash
 sudo apt install software-properties-common
@@ -186,7 +186,9 @@ There are 3 choices for the alternative gcc (providing /usr/bin/gcc).
 Press <enter> to keep the current choice[*], or type selection number:
 
 ```
-- We enter the ID of the one we want to be set as default and press enter
+We enter the ID of the one we want to be set as default and press enter
+
+
 
 
 
