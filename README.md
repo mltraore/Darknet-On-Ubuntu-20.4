@@ -101,12 +101,65 @@ As we just added the CUDA path to our **.profile**, now the shell knows where to
 
 <br />
 
-Now let's verify our cuDNN installation  /*/optional\*\
+Now let's verify our cuDNN installation, this is **optional**
 ```bash
 cp -r /usr/src/cudnn_samples_v7/ $HOME
 cd $HOME/cudnn_samples_v7/mnistCUDNN
 make clean && make
 ./mnistCUDNN
 ```
+Let's verify some installations
+```bash
+python3 --version
+```
+if not installed
+```bash
+sudo apt-get install python3
+```
+
+```bash
+pip3 --version
+```
+if not installed
+```bash
+sudo apt-get install python3-pip
+python3 -m pip install --upgrade pip
+```
+
+```bash
+gcc --version
+```
+if not installed or version >= 8  
+we should install one or multiple versions and choose the compatible one via **update-alternatives**  
+To do this let's follow these steps  
+
+#### 1. Start by updating packages
+#### 2. Install the build-essential package by typing:
+#### 3. Install manual pages (optional)
+#### 4. The default version
+#### 5. Install multiple gcc versions
+##### a. First, add the ubuntu-toolchain-r/test PPA to your system with:
+##### b. Install the desired GCC and G++ versions by typing:
+##### c. Configure alternative for each version. The default one is with the highest priority
+##### d. Change the default one
+
+ 
+```bash
+sudo apt update
+sudo apt install build-essential
+sudo apt-get install manpages-dev
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
+
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 80 --slave /usr/bin/g++ g++ /usr/bin/g++-8 --slave /usr/bin/gcov gcov /usr/bin/gcov-8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 --slave /usr/bin/g++ g++ /usr/bin/g++-7 --slave /usr/bin/gcov gcov /usr/bin
+
+
+
+```
+
+
 
 
