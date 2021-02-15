@@ -199,9 +199,30 @@ Verify the installation
 python3 -c "import cv2; print (cv2.__version__)"
 ```
 
-
-
-
+## Darknet
+- Clone darknet repository
+```bash
+git clone https://github.com/AlexeyAB/darknet.git
+```
+- Install using Cmake
+```bash
+cd darknet
+./build.sh
+```
+- Install with GPU, CUDA, cuDNN and openCV via the MakeFile
+Let's open the make file and make some changes
+in the first lines we have variables as  
+```make
+GPU=0
+CUDNN=0
+CUDNN_HALF=0
+OPENCV=0
+AVX=0
+OPENMP=0
+LIBSO=0
+ZED_CAMERA=0
+ZED_CAMERA_v2_8=0
+```
 
 
 
