@@ -42,15 +42,15 @@ sudo apt install cuda-10-1
 To avoid this problem, let's remove this package and install the compatible package for cuda-10.1.  
 ```bash
 # remove libcublas10.2
-apt-remove libcublas10* 
+sudo apt-get remove libcublas10* 
 
 # download cublas runtime and developper libraries (.deb)
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/libcublas10_10.1.0.105-1_amd64.deb      
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/libcublas-dev_10.1.0.105-1_amd64.deb
 
 # install (.deb) files
-dpkg -i libcublas10_10.1.0.105-1_amd64.deb
-dpkg -i libcublas-dev_10.1.0.105-1_amd64.deb
+sudo dpkg -i libcublas10_10.1.0.105-1_amd64.deb
+sudo dpkg -i libcublas-dev_10.1.0.105-1_amd64.deb
 ```
 
 ```diff
@@ -77,7 +77,7 @@ sudo mv /usr/local/cuda-10.1  /usr/local/cuda
 
 # 2. Option: create new directory
 sudo mkdir /usr/local/cuda
-sudo cp -r /usr/local/cuda-10.1 /usr/local/cuda
+sudo cp -r /usr/local/cuda-10.1/*  /usr/local/cuda/
 
 # 3. Option: create a symlink to the directory
 sudo ln -s /usr/local/cuda-10.1  /usr/local/cuda
@@ -238,3 +238,11 @@ If all goes well, we should have as output:
 ```
 usage: ./darknet <function>
 ```
+-Test on an image
+```
+./darknet detector test cfg/coco.data cfg/yolov3.cfg weights/yolov3.weights data/test-image.jpg
+```
+<p align=center>
+<img src="outlines/test.png" alt="Test Image" title="Test Image"  width="1000">
+</p>
+
