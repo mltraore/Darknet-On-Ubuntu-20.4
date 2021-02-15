@@ -218,48 +218,65 @@ CUDNN=0
 CUDNN_HALF=0
 OPENCV=0
 ```
-We change this values to  
+- We change this values to  
 ```make
 GPU=1
 CUDNN=1
 CUDNN_HALF=1
 OPENCV=1
 ```
-in order to enable CUDA cudNN and openCV  
+- In order to enable CUDA cudNN and openCV  
 Then we save the file and open the terminal window in the darknet core directory  
 ```
 make
 ```
-Then once the compilation finished we verify the installation by typing {} in te terminal
+- Then once the compilation finished we verify the installation by typing {} in te terminal
 ```
 ./darknet
 ```
-If all goes well, we should have as output:
+- If all goes well, we should have as output:
 ```
 usage: ./darknet <function>
 ```
--Test on an image
+- Test on an image
 ```
 ./darknet detector test cfg/coco.data cfg/yolov3.cfg weights/yolov3.weights data/test-image.jpg
 ```
 
 - Details:  
-- {- data/test_image.jpg: Predicted in 61.536000 milli-seconds. -}  
-- {+ chair: 71% +}
-- {+ person: 100% +}
-- {+ tvmonitor: 99% +}
-- {+ keyboard: 27% +}
-- {+ pottedplant: 43% +}
-- {+ book: 58% +}
-- {+ book: 31% +}
-- {+ book: 26% +}
-- {+ book: 72% +}
-- {+ book: 56% +}
-- {+ book: 75% +}
-- {+ book: 69% +}
-- {+ book: 93% +}
-- {+ pottedplant: 91% +}
-- {+ vase: 29% +}
+  - {- data/test_image.jpg: Predicted in 61.536000 milli-seconds. -}  
+  - {+ chair: 71% +}
+  - {+ person: 100% +}
+  - {+ tvmonitor: 99% +}
+  - {+ keyboard: 27% +}
+  - {+ pottedplant: 43% +}
+  - {+ book: 58% +}
+  - {+ book: 31% +}
+  - {+ book: 26% +}
+  - {+ book: 72% +}
+  - {+ book: 56% +}
+  - {+ book: 75% +}
+  - {+ book: 69% +}
+  - {+ book: 93% +}
+  - {+ pottedplant: 91% +}
+  - {+ vase: 29% +}
+
+  - {+ addition +]
+  - [+ addition +}
+  - {- deletion -]
+  - [- deletion -}
+  
+ ```diff
+ 
+  - {+ book: 75% +}
+  - {+ book: 69% +}
+  - {+ book: 93% +}
+  - {+ pottedplant: 91% +}
+  - {+ vase: 29% +}
+
+ 
+ ```
+
 
 <p align=center>
 <img src="test_image.jpg" alt="Test Image" title="Test Image"  width="1000">
