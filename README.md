@@ -243,26 +243,25 @@ usage: ./darknet <function>
 ./darknet detector test cfg/coco.data cfg/yolov3.cfg weights/yolov3.weights data/test-image.jpg
 ```
 
-- Details:
-{- data/test_image.jpg: Predicted in 61.536000 milli-seconds. -}
-{+ chair: 71% +}
-{+ person: 100% +}
-{+ tvmonitor: 99% +}
-{+ keyboard: 27% +}
-{+ pottedplant: 43% +}
-{+ book: 58% +}
-{+ book: 31% +}
-{+ book: 26% +}
-{+ book: 72% +}
-{+ book: 56% +}
-{+ book: 75% +}
-{+ book: 69% +}
-{+ book: 93% +}
-{+ pottedplant: 91% +}
-{+ vase: 29% +}
-
+- Details:  
+- {- data/test_image.jpg: Predicted in 61.536000 milli-seconds. -}  
+- {+ chair: 71% +}
+- {+ person: 100% +}
+- {+ tvmonitor: 99% +}
+- {+ keyboard: 27% +}
+- {+ pottedplant: 43% +}
+- {+ book: 58% +}
+- {+ book: 31% +}
+- {+ book: 26% +}
+- {+ book: 72% +}
+- {+ book: 56% +}
+- {+ book: 75% +}
+- {+ book: 69% +}
+- {+ book: 93% +}
+- {+ pottedplant: 91% +}
+- {+ vase: 29% +}
 
 <p align=center>
-<img src="outlines/test_image.jpg" alt="Test Image" title="Test Image"  width="1000">
+<img src="test_image.jpg" alt="Test Image" title="Test Image"  width="1000">
 </p>
 
