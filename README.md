@@ -56,7 +56,6 @@ sudo dpkg -i libcublas-dev_10.1.0.105-1_amd64.deb
 ```diff
 + After installing CUDA we reboot the system
 ```
-
 To install cuDNN library we download cuDNN Runtime, Developper and and Code Samples int (.deb)  format from [here](http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/).  
 Download -->  cuDNN Runtime Library  for cuda 10.1  
 Download -->  cuDNN Developper Library  for cuda 10.1   
@@ -82,6 +81,17 @@ sudo cp -r /usr/local/cuda-10.1/*  /usr/local/cuda/
 # 3. Option: create a symlink to the directory
 sudo ln -s /usr/local/cuda-10.1  /usr/local/cuda
 ```
+To complete the setup, we download the cuDNN library files and move them to the appropriate directories.  
+
+```bash
+wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.1_20191031/cudnn-10.1-linux-x64-v7.6.5.32.tgz
+tar -xzf cudnn-10.1-linux-x64-v7.6.5.32.tgz
+cd cuda
+sudo cp include/cudnn.h /usr/local/cuda/include
+sudo cp lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+```
+
 After installing, let's open our **.profile** file and add this short script using vim.  
 ```
 # open .profile
